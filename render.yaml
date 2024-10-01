@@ -1,0 +1,5 @@
+services:
+  - name: Hotel_Backend
+    type: npm
+    buildCommand: npm install
+    startCommand: node server.js
