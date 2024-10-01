@@ -33,7 +33,7 @@ app.get("/hotels", async (req, res) => {
 // Function to fetch hotels from SerpAPI
 async function fetchHotels(q, currency, checkInDate = "", checkOutDate = "") {
   try {
-    let url = `https://serpapi.com/search?engine=google_hotels&q=${encodeURIComponent(q)}&api_key=${SERPAPI_KEY}`;
+    let url = `https://serpapi.com/search?engine=google_hotels&q=${encodeURIComponent(q)}&currency=${currency}&api_key=${SERPAPI_KEY}`;
 
     if (checkInDate) {
       url += `&check_in_date=${checkInDate}`;
